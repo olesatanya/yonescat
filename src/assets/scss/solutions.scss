@@ -1,0 +1,133 @@
+@import "component.scss";
+
+.solutions {
+    @extend .m0;
+    @extend .p0;
+    @extend .w100;
+    height: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+    .section-1 {
+        background-color: #0e0e0e;
+        padding: 5rem;
+        @media (max-width: 1200px) {
+            padding: 3em !important;
+        }
+        @media (max-width: 1024px) {
+            padding: 1em !important;
+        }
+        .soft-card {
+            @extend .pointer;
+            @extend .block;
+            @extend .relative;
+            @include transition;
+            min-height: 10px;
+            max-width: 320px;
+            padding: 5em 3em 3em;
+            margin: 1em auto;
+            background-color: #2f2f2f;
+            border-radius: 10px;
+            word-wrap: break-word;
+            z-index: 100;
+            height: 90%;
+            color: var(--font-white-color);
+            @media (max-width: 576px) {
+                h3 {
+                    width: 70%;
+                }
+            }
+            a {
+                color: var(--font-white-color);
+            }
+            .h4 {
+                @include transition;
+                float: right;
+                &:hover {
+                    transform: translateX(10px);
+                }
+            }
+            &:hover,
+            &.active {
+                background-color: var(--default-color);
+                color: var(--font-black-color);
+                box-shadow: 1px 3px 5px var(--default-color);
+                a {
+                    color: var(--font-black-color);
+                }
+                &::after {
+                    @include absolute;
+                    @include transition;
+                    @extend .w100;
+                    bottom: 10px;
+                    right: 10px;
+                    background-color: var(--font-white-color);
+                    content: "";
+                    height: 100%;
+                    z-index: -1;
+                    border-radius: 10px;
+                }
+            }
+
+            &.row2 {
+                transform: translateX(5em);
+                @media (max-width: 1200px) {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+    .section-2 {
+        background-color: #272727;
+        padding: 5rem;
+        @media (max-width: 1200px) {
+            padding: 3em !important;
+        }
+        @media (max-width: 1024px) {
+            padding: 1em !important;
+        }
+    }
+    @keyframes ellipse-animation {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1);
+        }
+        70% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+    .ellipse1 {
+        @include ellipse;
+        left: -300px;
+        top: 30%;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        
+    }
+    .ellipse2 {
+        @include ellipse;
+        right: -20%;
+        top: 50%;
+        animation-duration: 10s;
+        animation-delay: 1s;
+    }
+    .ellipse3 {
+        @include ellipse;
+        top: -30%;
+        left: -200px;
+        animation-duration: 15s;
+        animation-delay: 5s;
+    }
+
+    @media (max-width: 1200px) {
+        .ellipse1,
+        .ellipse2,
+        .ellipse3 {
+            display: none;
+        }
+    }
+}

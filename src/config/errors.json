@@ -1,0 +1,13 @@
+{
+	"1001":	"Usernames can only have lowercase Letters (a-z) and numbers (0-9), 3 ~ 20 characters",
+	"1002":	"Invalid email address",
+	"1003":	"Invalid password length",
+	"1004":	"The user is not registered yet.",
+	"1005":	"You do not have login privileges.Please contact to support team.",
+	"1006":	"Please check your password and try again.",
+	"1007":	"Your username or email address already exists in the system.",
+	"1008":	"You are already logged on to the system.",
+	"2000":	"Please log in first and try again.",
+	"2001":	"The code must be 6 digits number.",
+	"0":	"Network disconnected"
+}

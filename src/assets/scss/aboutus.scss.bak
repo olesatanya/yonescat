@@ -1,0 +1,7 @@
+body{
+	color:red; 
+} 
+ 
+.aboutus{
+	color: black;
+}  

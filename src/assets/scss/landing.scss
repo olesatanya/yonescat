@@ -1,0 +1,321 @@
+@import "component.scss";
+
+.landing {
+    overflow: hidden;
+    @extend .relative;
+    .section-1 {
+        @extend .w100;
+        @extend .relative;
+        @extend .m0;
+        min-height: 100vh;
+        height: 100%;
+        padding: 1em;
+        background: url(../img/landing-back.webp) no-repeat, rgba(0, 0, 0, 0.6);
+        background-blend-mode: darken;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: 1em;
+        .title-panel {
+            @extend .center;
+        }
+        .btn-arrow-down {
+            @extend .pointer; 
+            @include absolute;
+            @include transition; 
+            left: 48%;
+            bottom: 8%;
+            padding: 50px 0 0;
+            z-index: 1000;
+            &:hover {
+                transform: translateY(10px);
+            }
+        }
+        .ask-panel {
+            @extend .ml-auto;
+            @extend .mr-auto;
+            @extend .w100;
+            z-index: 10;
+            background-color: white;
+            border-radius: 10px; 
+            padding: 3em 3em 3em 2em;
+            max-width: 500px;
+            min-width: 300px; 
+            color: var(--font-black-color);
+            box-shadow: 7px 5px 7px var(--default-light-color);
+            @media (max-width: 1024px) {
+                padding: 1.5em;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            div.radio-label {
+                @extend .relative;
+                @extend .pointer;
+                @extend .no-select;
+                font-size: 1.1rem;
+                padding-left: 25px;
+                margin: 5px 0;
+                &:hover .radio {
+                    background-color: var(--default-color);
+                }
+            }
+            .radio {
+                @include absolute;
+                @include transition;
+                left: 0px;
+                top: 7px;
+                border-radius: 50%;
+                width: 10px;
+                height: 10px;
+                outline: 1px solid black;
+                padding: 3px;
+                outline-offset: 3px;
+                content: "";
+                &.checked {
+                    background-color: var(--default-color);
+                }
+            }
+        }
+    }
+    .section-2 {
+        @extend .flex;
+        @extend .justify-between;
+        @extend .relative;
+        background-color: #101010;
+        min-height: 400px;
+        height: 100%;
+        flex-direction: row;
+        background-image: url(../img/section_2.webp);
+        background-position: left;
+        background-size: 450px 100%;
+        background-repeat: no-repeat;
+        @media (max-width: 1024px) {
+            background-image: none;
+        }
+        .des-panel {
+            @extend .middle;
+            @extend .ml-auto;
+            @extend .mr-auto;
+            flex: 9;
+            align-self: center;
+            padding: 1rem 3rem;
+            .des-item {
+                @extend .flex;
+                margin: 0 1em;
+                flex: 3;
+                justify-items: flex-start;
+                justify-content: flex-start;
+                flex-direction: row;
+                align-items: flex-start;
+                img {
+                    margin: 2rem 2em;
+                    border: 2px solid var(--font-white-color);
+                    padding: 1em;
+                    border-radius: 50%;
+                    width: 70px;
+                    min-width: 70px;
+                    min-height: 70px;
+                    height: 70px;
+                }
+                @media (max-width: 600px) {
+                    img {
+                        margin: 2rem 1em;
+                    }
+                }
+            }
+
+            @media (max-width: 400px) {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+    .section-3 {    
+        background-color: #202020;
+        padding: 3em;
+        @media (max-width: 1200px) {
+            padding: 3em !important;
+        }
+        @media (max-width: 1024px) {
+            padding: 1em !important;
+        }
+        .work-card {
+            @extend .relative;
+            @extend .pointer;
+            @extend .w100;
+            @include transition;
+            @extend .text-center;
+            background-color: var(--default-light-color);
+            border-radius: 10px;
+            color: var(--font-black-color);
+            padding: 1.5em 1.4em;
+            height: 100%;
+            max-width: 400px;
+            margin: 1em auto;
+            &:hover {
+                transform: translateY(-5px);
+                background-color: #ffebead5;
+                box-shadow: 1px 2px 2px #c5717e;
+            }
+        }
+    }
+    .section-4 {
+        background-color: #101010;
+        padding: 3em;
+        @media (max-width: 1024px) {
+            padding: 1em !important;
+        }
+    }
+    .section-5 {
+        background-color: #202020;
+        padding: 5em 8em;
+        @media (max-width: 1200px) {
+            padding: 3em !important;
+        }
+        @media (max-width: 1024px) {
+            padding: 1em !important;
+        }
+        .client-link {
+            @include transition;
+            @extend .pointer;
+            @extend .text-center;
+            width: 100px;
+            height: 60px;
+            margin: 1em;
+            &:hover {
+                transform: translateY(-10px);
+            }
+        }
+    }
+
+    @keyframes ellipse-animation {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1); 
+        }
+        70% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+
+    .ellipse1 {
+        @include ellipse;
+        left: -100px;
+        top: 120vh; 
+        animation-duration: 5s;
+        animation-delay: 1s; 
+    }
+    .ellipse2 {
+        @include ellipse;
+        right: -500px;
+        top: 120vh;
+        animation-delay: 3s;
+        animation-duration: 16s;
+    }
+    .ellipse3 {
+        @include ellipse;
+        left: -200px;
+        top: 220vh;
+        animation-duration: 15s;
+        animation-delay: 5s;
+    }
+    .ellipse4 {
+        @include ellipse;
+        right: -220px;
+        bottom: 230vh;
+        animation-delay: 1s;
+        animation-duration: 10s;
+    }
+    .ellipse5 {
+        @include ellipse;
+        right: -20px;
+        bottom: 20vh;
+        animation-delay: 1s;
+        animation-duration: 10s;
+    }
+
+    @media (max-width: 1200px) {
+        .ellipse1,
+        .ellipse2,
+        .ellipse3,
+        .ellipse4,
+        .ellipse5 {
+            display: none;
+        }
+    }
+    .stroke-number {
+        @extend .pointer;
+        font-size: 14em;
+        line-height: 0;
+        color: transparent;
+        -webkit-text-stroke: 3px var(--default-color);
+        animation-name: stroke-animation;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        @keyframes stroke-animation {
+            from {
+                color: transparent;
+            }
+            to {
+                color: var(--default-color);
+            }
+        }
+    }
+    .landing-choose-image {
+        @include absolute;
+        @include transition;
+        @extend .pointer;
+        height: 95%;
+        z-index: 3;
+        width: auto;
+        border-radius: 50%;
+        top: 3%;
+        left: 2%;
+    }
+    .round-desc-1 {
+        @media (max-width: 1024px) {
+            transform: none !important;
+        }
+    }
+    .landing-text {
+        @media (max-width: 550px) {
+            width: 170px;
+            transform: none !important;
+        }
+    }
+    .choose-image-pan {
+        @extend .relative;
+        @include transition;
+        overflow: hidden;
+        border-radius: 50%;
+        width: 400px;
+        height: 400px;
+        max-height: 550px;
+        @media (max-width: 1200px) {
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+            min-width: 150px;
+            min-height: 150px;
+            height: 250px;
+            transform: none !important;
+        }
+
+        @media (max-width: 780px) {
+            width: 150px;
+            height: auto;
+            img {
+                width: 150px;
+                height: auto;
+            }
+        }
+        &:hover img {
+            transform: scale(1.3);
+        }
+    }
+}

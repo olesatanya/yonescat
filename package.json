@@ -1,0 +1,55 @@
+{
+  "name": "yonescat-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.7.1",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.8",
+    "@types/react-toastify": "^4.1.0",
+    "path-browserify": "^1.0.1",
+    "path-to-regexp": "^6.2.0",
+    "react": "^17.0.2",
+    "react-animate-on-scroll": "^2.1.5",
+    "react-animated-css": "^1.2.1",
+    "react-bootstrap": "^2.2.3",
+    "react-content-loader": "^6.0.3",
+    "react-dom": "^17.0.2",
+    "react-loading": "^2.0.3",
+    "react-redux": "^7.2.6",
+    "react-router-dom": "^5.2.0",
+    "react-scroll": "^1.8.6",
+    "react-toastify": "^7.0.4",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "react-scripts": "^5.0.0",
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "start": "set HTTPS=true&&react-scripts start",
+    "build": "react-scripts build",
+    "testui": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

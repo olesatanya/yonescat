@@ -1,0 +1,6 @@
+.env
+node_modules
+.vscode
+.command
+yarn.lock
+yar-error.log

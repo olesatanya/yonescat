@@ -1,0 +1,142 @@
+@import "component.scss";
+
+.infrastructure {
+    @extend .m0;
+    @extend .p0;
+    @extend .w100;
+    height: 100%;
+    overflow: hidden;
+    min-height: 100vh;
+
+    .section-1 {
+        background-color: #272727;
+        padding: 5rem 0;
+        @media (max-width: 1200px) {
+            padding: 3em !important;
+        }
+        @media (max-width: 1024px) {
+            padding: 1em !important;
+        }
+        .soft-card {
+            @include card;
+            color: var(--font-black-color);
+            min-height: 10px;
+            padding: 5em 2em 2em;
+            background-color: var(--default-light-color);
+            word-wrap: break-word;
+            min-width: 320px;
+            margin: 1em;
+            word-break: keep-all;
+            z-index: 100;
+            height: 100%;
+            width: auto;
+            img {
+                @extend .text-center;
+                width: 100px;
+                height: 100px;
+            }
+            a {
+                img {
+                    width: 40px;
+                    height: 60px;
+                }
+            }
+            .h4 {
+                color: var(--font-black-color);
+                font-size: 1.3em;
+            }
+            &:hover {
+                background-color: var(--font-white-color);
+                transform: translateY(-10px);
+                box-shadow: 0 2px 8px var(--default-color);
+            }
+        }
+    }
+
+    .section-2 {
+        background-color: #0e0e0e;
+        padding: 5rem;
+        @media (max-width: 1200px) {
+            padding: 3em !important;
+        }
+        @media (max-width: 1024px) {
+            padding: 1em !important;
+        }
+        .fact-card {
+            @include card;
+            border-radius: 10px;
+            padding: 0.5em 0.4em;
+            background-color: #252526;
+            margin: 5px;
+            min-height: 100px;
+            @media (max-width: 1024px) {
+                h3,
+                p {
+                    margin: 5px;
+                }
+                padding: 10px;
+            }
+            img {
+                @include absolute;
+                height: 50%;
+                bottom: 25%;
+                right: -15px;
+                max-width: 100px;
+                z-index: 0;
+                @media (max-width: 400px) {
+                    // display: none;
+                }
+            }
+            &:hover {
+                background-color: #1a1a1a;
+                transform: translateY(-10px) scale(1.1);
+                box-shadow: 0 2px 8px var(--default-color);
+            }
+        }
+    }
+    .section-3 {
+        background-color: #272727;
+        padding: 5rem;
+        @media (max-width: 1200px) {
+            padding: 3em !important;
+        }
+        @media (max-width: 1024px) {
+            padding: 1em !important;
+        }
+    }
+    @keyframes ellipse-animation {
+        0% {
+            transform: scale(0);
+        }
+        50% {
+            transform: scale(1);
+        }
+        70% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(0);
+        }
+    }
+    .ellipse1 {
+        @include ellipse;
+        left: -300px;
+        top: 100%;
+        animation-duration: 5s;
+        animation-delay: 1s;
+    }
+    .ellipse2 {
+        @include ellipse;
+        right: -4%;
+        top: 128%;
+        animation-duration: 10s;
+        animation-delay: 1s;
+    }
+
+    @media (max-width: 1024px) {
+        .ellipse1,
+        .ellipse2 {
+            display: none;
+        }
+    }
+}
